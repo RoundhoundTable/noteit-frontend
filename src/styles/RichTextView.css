@@ -1,3 +1,7 @@
 .clean-rich-text {
     background-color: white !important;
   }
+
+  .public-DraftEditor-content {
+    word-break: break-all;
+  }

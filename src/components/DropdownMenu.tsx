@@ -13,7 +13,7 @@ export const DropdownMenu = ({
 
   return (
     <div ref={ref} className="relative w-full">
-      <ul className="z-10 absolute right-0 bottom-0 md:bottom-auto w-52 bg-white my-3 rounded shadow-xl shadow-primary-500/30 text-center text-primary-500">
+      <ul className="z-10 absolute right-0 bottom-0 md:bottom-auto w-52 bg-white mb-3 rounded shadow-xl shadow-primary-500/30 text-center text-primary-500">
         {children}
       </ul>
     </div>
