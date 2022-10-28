@@ -10,7 +10,7 @@ export const NoteWrapper = (props: PropsWithChildren<INoteWrapperProps>) =>
       {props.children}
     </article>
   ) : (
-    <article className="p-6 max-h-max shadow-xl shadow-primary-500/30 flex flex-row item-center  max-w-7xl">
+    <article className="p-6 max-h-max shadow-xl shadow-primary-500/30 flex flex-row item-center w-full md:max-w-7xl">
       {props.children}
     </article>
   );

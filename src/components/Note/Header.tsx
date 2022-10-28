@@ -12,7 +12,7 @@ export const Header = (props: PropsWithChildren<any>) => {
       <div className="flex flex-row items-center">{props.children}</div>
       {currentUser && noteContext?.isOwner ? (
         <Icon
-          className="opcion"
+          className="opcion self-end"
           icon="simple-line-icons:options-vertical"
           onClick={props.toggleDropdown}
         />

@@ -10,7 +10,7 @@ import { getAuth } from "firebase/auth";
 
 export const buildApolloClient = () => {
   const httpLink = new HttpLink({
-    uri: "http://localhost:4000",
+    uri: "http://noteit-backend-73.herokuapp.com",
   });
 
   const getIdToken = async () => await getAuth().currentUser?.getIdToken();
