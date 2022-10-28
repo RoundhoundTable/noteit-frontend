@@ -53,7 +53,7 @@ export const NotebookHeader = ({
   }, [_data]);
 
   return (
-    <div className="bg-white flex flex-col lg:flex-row justify-between items-center p-4 md:px-32 shadow-lg shadow-primary-700/25 w-full gap-5">
+    <div className="bg-white flex flex-row justify-between items-center p-4 md:px-32 shadow-lg shadow-primary-700/25 w-full gap-5">
       <div className="flex flex-row gap-2 md:gap-10">
         {isEditMode ? (
           <ImageInput
