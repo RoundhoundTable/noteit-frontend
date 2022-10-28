@@ -13,6 +13,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { useNavigate } from "react-router-dom";
 import { _user, _userData } from "../graphql/queries/_user";
 import { User } from "../interfaces/Entities";
 
@@ -43,6 +44,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }: PropsWithChildren<any>) => {
   const client = useApolloClient();
+  const navigateTo = useNavigate();
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -51,7 +53,8 @@ export const AuthProvider = ({ children }: PropsWithChildren<any>) => {
   };
 
   const signOut = (): any => {
-    return firebaseSignOut(auth);
+    firebaseSignOut(auth);
+    navigateTo(0);
   };
 
   const signUp = (token: string) => {
