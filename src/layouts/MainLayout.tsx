@@ -21,7 +21,7 @@ export const MainLayout = () => {
       ) : (
         <Navbar />
       )}
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-hidden">
         <Outlet />
       </div>
       {mobileView && <Navbar mobileView />}
