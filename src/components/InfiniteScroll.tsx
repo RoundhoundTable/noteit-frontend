@@ -18,7 +18,7 @@ export const NoteInfiniteScroll = ({
     loader={<h4>Loading...</h4>}
     hasMore={hasMore}
     next={fetchMore}
-    className="p-2"
+    className="px-8 pb-16"
   >
     {notes.map((note: Note, key: number) => (
       <NotePreview {...note} key={key} />
