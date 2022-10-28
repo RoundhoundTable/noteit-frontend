@@ -55,7 +55,7 @@ export const CreateNotebookPage = () => {
   return (
     currentUser && (
       <div className="font-montserrat flex flex-col justify-center items-center">
-        <div className="shadow-xl shadow-primary-500/30 p-5 mt-5 md:mt-20 border-2 md:max-w-7xl max-w-sm align-middle">
+        <div className="shadow-xl shadow-primary-500/30 p-5 mt-5 md:mt-20 border-2 md:max-w-7xl w-full align-middle">
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col align-middle justify-center px-16">
               <ImageInput

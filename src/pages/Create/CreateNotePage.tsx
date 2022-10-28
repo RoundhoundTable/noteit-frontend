@@ -58,7 +58,7 @@ export const CreateNotePage = () => {
 
   return (
     <div className="font-montserrat flex flex-col justify-center items-center">
-      <div className="shadow-xl shadow-primary-500/30 p-5 mt-20 border-2 w-3/4">
+      <div className="shadow-xl shadow-primary-500/30 p-5 mt-20 border-2 w-full">
         <NoteItSelect
           label="Notebook"
           name="notebookName"
