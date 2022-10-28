@@ -27,7 +27,7 @@ export const MainPage = () => {
   };
 
   return currentUser ? (
-    <div className="flex flex-col justify-center items-center w-screen mb-16 px-8 md:p-0 z-10">
+    <div className="flex flex-col justify-center items-center w-full mb-16 px-8 md:p-0 z-10">
       {_feed && _feed.notes.length > 0 ? (
         <NoteInfiniteScroll fetchMore={fetchMoreData} {..._feed} />
       ) : (

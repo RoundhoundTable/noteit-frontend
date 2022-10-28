@@ -54,7 +54,7 @@ export const ProfilePage = () => {
     <div>
       {_user && <ProfileHeader {..._user} />}
       <div className="flex flex-col justify-center items-center mt-4 mb-16 p-8 md:p-0">
-        <div className="flex flex-col justify-center items-center w-screen mb-16 px-8 md:p-0 z-10">
+        <div className="flex flex-col justify-center items-center w-full mb-16 px-8 md:p-0 z-10">
           {_data && <NoteInfiniteScroll fetchMore={fetchMoreData} {..._data} />}
         </div>
       </div>
