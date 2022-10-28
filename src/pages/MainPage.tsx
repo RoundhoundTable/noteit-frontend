@@ -1,5 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { NoteInfiniteScroll } from "../components/InfiniteScroll";
+import { JoinNotebookCTA } from "../components/JoinNotebookCTA";
+import { SignInCTA } from "../components/SignInCTA";
 import { useAuth } from "../context/AuthProvider";
 import { feed, feedData, feedVars } from "../graphql/queries/feed";
 
@@ -26,10 +28,14 @@ export const MainPage = () => {
 
   return currentUser ? (
     <div className="flex flex-col justify-center items-center w-screen mb-16 px-8 md:p-0 z-10">
-      {_feed && <NoteInfiniteScroll fetchMore={fetchMoreData} {..._feed} />}
+      {_feed && _feed.notes.length > 0 ? (
+        <NoteInfiniteScroll fetchMore={fetchMoreData} {..._feed} />
+      ) : (
+        <JoinNotebookCTA />
+      )}
     </div>
   ) : (
-    <h2>Debes iniciar sesion para tener un feed</h2>
+    <SignInCTA />
   );
 };
 export {};
