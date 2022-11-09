@@ -5,7 +5,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { useWindowSize } from "../hooks/useWindowSize";
 
 export const MainLayout = () => {
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
   const [mobileView, setMobileView] = useState<boolean>(width < 768);
 
   useEffect(() => {
@@ -13,7 +13,9 @@ export const MainLayout = () => {
   }, [width]);
 
   return (
-    <div className="flex flex-col min-h-screen font-montserrat">
+    <div className="flex flex-col font-montserrat" style={{
+      minHeight: `${height}px`,
+    }}>
       {mobileView ? (
         <div className="sticky w-full flex flex-row justify-around py-2 shadow-xl shadow-primary-500/10 bg-white">
           <Logo className="h-11" />
