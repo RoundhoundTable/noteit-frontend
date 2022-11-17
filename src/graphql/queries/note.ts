@@ -23,6 +23,7 @@ export const note = gql`
       }
       notebook {
         name
+        role
       }
       score
       userVote
