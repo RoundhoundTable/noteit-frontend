@@ -34,7 +34,7 @@ export const DropdownNoteOptions = ({ noteId }: { noteId: string }) => {
   };
 
   useEffect(() => {
-    if (data?.comment?.deleted) {
+    if (data?.note?.deleted) {
       toggleModal();
       navigateTo("/");
     }
