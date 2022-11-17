@@ -12,15 +12,6 @@ export const DropdownNoteOptions = ({ noteId }: { noteId: string }) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [deleteNote, { data }] = useMutation(note);
 
-  console.log({
-    variables: {
-      type: ENoteMutationType.DELETE,
-      payload: {
-        id: noteId,
-      },
-    },
-  });
-
   const toggleModal = () => setShowModal(!showModal);
   const deleteNoteModal: IModalProps = {
     message: "¿Estas seguro de que deseas eliminar la publicacion?",
