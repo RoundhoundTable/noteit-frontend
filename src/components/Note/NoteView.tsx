@@ -30,7 +30,7 @@ export const NoteView = (props: Note) => {
           </Header>
           {showDropdown && (
             <DropdownMenu togglerFunc={setShowDropdown}>
-              <DropdownNoteOptions noteId={props.id} />
+              <DropdownNoteOptions {...props} />
             </DropdownMenu>
           )}
           <Content />
